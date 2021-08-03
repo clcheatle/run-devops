@@ -53,7 +53,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     pool:
-      vmImage: $(vmImageName)
+      Default
     environment: 'clcheatlerundevops.default'
     strategy:
       runOnce:
