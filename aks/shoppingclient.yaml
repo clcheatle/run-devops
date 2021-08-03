@@ -17,7 +17,7 @@ spec:
       containers:
         - name: shoppingclient
           image: shoppingacr82.azurecr.io/shoppingclient:v2
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: IfNotPresent          
           ports:
             - containerPort: 80
           env:
@@ -31,10 +31,10 @@ spec:
           resources:
             requests:
               memory: "64Mi"
-              cpu: "250m"
+              cpu: "0.1"
             limits:
               memory: "128Mi"
-              cpu: "500m"
+              cpu: "0.3"
       imagePullSecrets:
         - name: acr-secret
 ---
@@ -48,4 +48,4 @@ spec:
     app: shoppingclient
   ports:
     - protocol: TCP
-      port: 80
+      port: 80 
